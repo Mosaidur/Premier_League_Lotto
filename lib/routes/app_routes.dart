@@ -4,6 +4,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 import '../features/auth/screens/address_page.dart';
 import '../features/auth/screens/create_account_page.dart';
 import '../features/auth/screens/pass_security_page.dart';
+import '../features/auth/screens/sign_in.dart';
 import '../features/splash/bindings/splash_binding.dart';
 import '../features/splash/screens/splash_screen.dart';
 
@@ -16,6 +17,7 @@ class AppRoutes {
   static const createAccountPage = '/create-account';
   static const addressPage = '/addressPage';
   static const passAndSecurityPage = '/passAndSecurityPage';
+  static const signInPage = '/signInPage';
 
   static final routes = [
     GetPage(
@@ -39,6 +41,10 @@ class AppRoutes {
     GetPage(
       name: '/passAndSecurityPage',
       page: () => PassAndSecurityPage(),
+    ),
+    GetPage(
+      name: '/signInPage',
+      page: () => SignInPage(),
     ),
 
   ];

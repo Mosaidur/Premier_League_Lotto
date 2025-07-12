@@ -167,7 +167,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                       const SizedBox(width: 8),
                       GestureDetector(
                         onTap: () {
-                          Get.toNamed('/signin');
+                          Get.toNamed('/signInPage');
                         },
                         child: ShaderMask(
                           shaderCallback: (bounds) => const LinearGradient(

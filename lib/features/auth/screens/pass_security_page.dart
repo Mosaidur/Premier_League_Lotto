@@ -278,7 +278,7 @@ class _PassAndSecurityPageState extends State<PassAndSecurityPage> {
                       const SizedBox(width: 8),
                       GestureDetector(
                         onTap: () {
-                          Get.toNamed('/signin');
+                          Get.toNamed('/signInPage');
                         },
                         child: ShaderMask(
                           shaderCallback: (bounds) => const LinearGradient(
