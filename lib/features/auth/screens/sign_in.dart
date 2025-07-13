@@ -93,6 +93,7 @@ class _SignInPageState extends State<SignInPage> {
                           style: TextStyle(
                             color: Color(0xFFF24933),
                             decoration: TextDecoration.underline,
+                            decorationColor: Color(0xFFF24933),
                           ),
                         ),
                       ),
@@ -148,7 +149,7 @@ class _SignInPageState extends State<SignInPage> {
                       const Padding(
                         padding: EdgeInsets.symmetric(horizontal: 8.0),
                         child: Text(
-                          "or",
+                          "Or",
                           style: TextStyle(color: Colors.white),
                         ),
                       ),
@@ -192,7 +193,7 @@ class _SignInPageState extends State<SignInPage> {
                           Text(
                             "Continue With Google",
                             style: TextStyle(
-                              color: Colors.blue[900],
+                              color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -211,7 +212,7 @@ class _SignInPageState extends State<SignInPage> {
                         print("Continue with Apple");
                       },
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
+                        backgroundColor: Colors.transparent,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10),
                         ),
@@ -227,7 +228,7 @@ class _SignInPageState extends State<SignInPage> {
                               shape: BoxShape.circle,
                             ),
                             child: Image.asset(
-                              'assets/images/apple.png',
+                              'assets/images/apple logo.png',
                               height: 20,
                               width: 20,
                             ),
@@ -236,7 +237,7 @@ class _SignInPageState extends State<SignInPage> {
                           Text(
                             "Continue With Apple",
                             style: TextStyle(
-                              color: Colors.blue[900],
+                              color: Colors.white,
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
                             ),
@@ -258,7 +259,7 @@ class _SignInPageState extends State<SignInPage> {
                       const SizedBox(width: 8),
                       GestureDetector(
                         onTap: () {
-                          Get.toNamed('/signup');
+                          Get.toNamed('/create-account');
                         },
                         child: ShaderMask(
                           shaderCallback: (bounds) => const LinearGradient(
