@@ -3,6 +3,7 @@ import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../features/auth/screens/address_page.dart';
 import '../features/auth/screens/create_account_page.dart';
+import '../features/auth/screens/how_to_play.dart';
 import '../features/auth/screens/pass_security_page.dart';
 import '../features/auth/screens/sign_in.dart';
 import '../features/splash/bindings/splash_binding.dart';
@@ -18,6 +19,7 @@ class AppRoutes {
   static const addressPage = '/addressPage';
   static const passAndSecurityPage = '/passAndSecurityPage';
   static const signInPage = '/signInPage';
+  static const howToPlayPage = '/howToPlayPage';
 
   static final routes = [
     GetPage(
@@ -27,8 +29,8 @@ class AppRoutes {
     ),
     GetPage(
       name: home,
-      page: () => const HomeScreen(),
-      binding: HomeBinding(),
+      page: () =>  HomePage(),
+      // binding: HomeBinding(),
     ),
     GetPage(
       name: '/create-account',
@@ -45,6 +47,10 @@ class AppRoutes {
     GetPage(
       name: '/signInPage',
       page: () => SignInPage(),
+    ),
+    GetPage(
+      name: '/howToPlayPage',
+      page: () => HowToPlayPage(),
     ),
 
   ];

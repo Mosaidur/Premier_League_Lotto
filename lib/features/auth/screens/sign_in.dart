@@ -117,7 +117,7 @@ class _SignInPageState extends State<SignInPage> {
                       ),
                       child: ElevatedButton(
                         onPressed: () {
-                          Get.toNamed('/next');
+                          Get.toNamed(AppRoutes.howToPlayPage);
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor: Colors.transparent,
