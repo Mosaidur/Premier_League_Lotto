@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../controllers/home_controller.dart';
+import 'home_widget.dart';
 
 
 
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final List<Widget> pages = [
-    HomePage(),
+    HomeWidgetsPage(),
     Center(child: Text("Meter", style: TextStyle(color: Colors.white))),
     Center(child: Text("Statistics", style: TextStyle(color: Colors.white))),
     Center(child: Text("Ticket", style: TextStyle(color: Colors.white))),

@@ -30,7 +30,7 @@ class AppRoutes {
     GetPage(
       name: home,
       page: () =>  HomePage(),
-      // binding: HomeBinding(),
+      binding: HomeBinding(),
     ),
     GetPage(
       name: '/create-account',
