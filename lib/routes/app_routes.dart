@@ -6,6 +6,8 @@ import '../features/auth/screens/create_account_page.dart';
 import '../features/auth/screens/how_to_play.dart';
 import '../features/auth/screens/pass_security_page.dart';
 import '../features/auth/screens/sign_in.dart';
+import '../features/home/bindings/ClubPageBinding.dart';
+import '../features/home/screens/ClubInfoPage.dart';
 import '../features/splash/bindings/splash_binding.dart';
 import '../features/splash/screens/splash_screen.dart';
 
@@ -20,6 +22,7 @@ class AppRoutes {
   static const passAndSecurityPage = '/passAndSecurityPage';
   static const signInPage = '/signInPage';
   static const howToPlayPage = '/howToPlayPage';
+  static const clubInfoPage = '/clubInfoPage';
 
   static final routes = [
     GetPage(
@@ -51,6 +54,11 @@ class AppRoutes {
     GetPage(
       name: '/howToPlayPage',
       page: () => HowToPlayPage(),
+    ),
+    GetPage(
+      name: '/clubInfoPage',
+      page: () => ClubInfoPage(),
+      // binding: ClubBinding(),
     ),
 
   ];
