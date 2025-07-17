@@ -16,7 +16,7 @@ class PremierLeagueLottoApp extends StatelessWidget {
       title: 'Premier League Lotto',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
-      initialRoute: AppRoutes.splash,
+      initialRoute: AppRoutes.home,
       getPages: AppRoutes.routes,
     );
   }

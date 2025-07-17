@@ -1,4 +1,6 @@
 
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/routes/get_route.dart';
 
 import '../features/auth/screens/address_page.dart';
@@ -8,6 +10,9 @@ import '../features/auth/screens/pass_security_page.dart';
 import '../features/auth/screens/sign_in.dart';
 import '../features/home/bindings/ClubPageBinding.dart';
 import '../features/home/screens/ClubInfoPage.dart';
+import '../features/home/screens/playerList.dart';
+import '../features/home/screens/player_stats_info.dart';
+import '../features/home/screens/squad.dart';
 import '../features/splash/bindings/splash_binding.dart';
 import '../features/splash/screens/splash_screen.dart';
 
@@ -23,6 +28,10 @@ class AppRoutes {
   static const signInPage = '/signInPage';
   static const howToPlayPage = '/howToPlayPage';
   static const clubInfoPage = '/clubInfoPage';
+  static const squadPage = '/squadPage';
+  static const playerListPage = '/playerListPage';
+  static const playerStatsInfoPage = '/playerStatsInfoPage';
+
 
   static final routes = [
     GetPage(
@@ -59,6 +68,26 @@ class AppRoutes {
       name: '/clubInfoPage',
       page: () => ClubInfoPage(),
       // binding: ClubBinding(),
+    ),
+    GetPage(
+      name: squadPage,
+      page: () => SquadPage(),
+    ),
+    GetPage(
+      name: playerListPage,
+      page: () {
+        final args = Get.arguments as Map<String, dynamic>;
+        return PlayerListPage(
+          pageTitle: args['title'] ?? '',
+          players: args['players'] ?? [],
+        );
+      },
+    ),
+    GetPage(
+      name: playerStatsInfoPage,
+      page: () => PlayerStatsInfoPage(
+        pageTitle: Get.arguments['title'],
+      ),
     ),
 
   ];
