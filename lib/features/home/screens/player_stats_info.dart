@@ -173,10 +173,10 @@ class PlayerStatsInfoPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          const CustomBackground(),
+          // const CustomBackground(),
 
           SafeArea(
             child: Column(

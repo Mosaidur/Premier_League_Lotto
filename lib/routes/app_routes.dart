@@ -13,6 +13,7 @@ import '../features/home/screens/ClubInfoPage.dart';
 import '../features/home/screens/playerList.dart';
 import '../features/home/screens/player_stats_info.dart';
 import '../features/home/screens/squad.dart';
+import '../features/prediction/screens/prediction_widget.dart';
 import '../features/splash/bindings/splash_binding.dart';
 import '../features/splash/screens/splash_screen.dart';
 
@@ -31,7 +32,7 @@ class AppRoutes {
   static const squadPage = '/squadPage';
   static const playerListPage = '/playerListPage';
   static const playerStatsInfoPage = '/playerStatsInfoPage';
-
+  static const predictionPage = '/predictionPage';
 
   static final routes = [
     GetPage(
@@ -88,6 +89,10 @@ class AppRoutes {
       page: () => PlayerStatsInfoPage(
         pageTitle: Get.arguments['title'],
       ),
+    ),
+    GetPage(
+      name: predictionPage,
+      page: () => PredictionPage(  ),
     ),
 
   ];

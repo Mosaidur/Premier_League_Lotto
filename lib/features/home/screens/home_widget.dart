@@ -22,40 +22,17 @@ class HomeWidgetsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.find<HomeController>();
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          /// 🔷 Background
-          const CustomBackground(),
 
           /// 🔷 Content
           Positioned.fill(
             child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
+              padding: const EdgeInsets.only(left: 16,right: 16),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-
-                  const SizedBox(height: 24),
-
-                  // 🔷 Top Row
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Container(
-                          width: 100,
-                          child: Image.asset('assets/images/main_logo.png')
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          _buildButton("Sign In", const Color(0xFF0B3666), Colors.white),
-                          const SizedBox(width: 8),
-                          _buildButton("Sign Up", Colors.white, const Color(0xFF0B3666), border: true),
-                        ],
-                      ),
-                    ],
-                  ),
                   const SizedBox(height: 24),
 
                   const Text(
