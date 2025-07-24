@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:sportolotto/features/statistic/screens/staistic_table.dart';
 
 class StatisticsPage extends StatelessWidget {
   StatisticsPage({super.key});
@@ -16,6 +19,7 @@ class StatisticsPage extends StatelessWidget {
     double mediaWidth = MediaQuery.of(context).size.width;
 
     return SingleChildScrollView(
+
       padding: const EdgeInsets.all(16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,6 +43,9 @@ class StatisticsPage extends StatelessWidget {
               return GestureDetector(
                 onTap: () {
                   // Handle tap
+                  Get.to(
+                    StatisticsTablePage(pageTitle: 'Monthly Statistics',),
+                  );
                 },
                 child: SizedBox(
                   width: (mediaWidth - 42) / 2, // 16+16+10 = 42

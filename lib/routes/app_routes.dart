@@ -19,6 +19,7 @@ import '../features/splash/screens/splash_screen.dart';
 
 import '../features/home/bindings/home_binding.dart';
 import '../features/home/screens/home_screen.dart';
+import '../features/statistic/screens/staistic_table.dart';
 
 class AppRoutes {
   static const splash = '/';
@@ -33,6 +34,7 @@ class AppRoutes {
   static const playerListPage = '/playerListPage';
   static const playerStatsInfoPage = '/playerStatsInfoPage';
   static const predictionPage = '/predictionPage';
+  static const statisticsTablePage = '/statisticsTablePage';
 
   static final routes = [
     GetPage(
@@ -91,8 +93,10 @@ class AppRoutes {
       ),
     ),
     GetPage(
-      name: predictionPage,
-      page: () => PredictionPage(  ),
+      name: statisticsTablePage,
+      page: () => StatisticsTablePage(
+        pageTitle: Get.arguments['title'],
+      ),
     ),
 
   ];

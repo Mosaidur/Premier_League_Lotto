@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/widgets/bg.dart';
+
 class StatisticsTablePage extends StatelessWidget {
   final String pageTitle;
 
@@ -27,7 +29,7 @@ class StatisticsTablePage extends StatelessWidget {
       backgroundColor: Colors.transparent,
       body: Stack(
         children: [
-          // const CustomBackground(),
+          const CustomBackground(),
 
           SafeArea(
             child: Column(
